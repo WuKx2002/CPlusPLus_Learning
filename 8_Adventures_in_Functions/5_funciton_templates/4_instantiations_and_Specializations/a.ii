@@ -1,0 +1,27 @@
+# 1 ".\\a.cpp"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 ".\\a.cpp"
+# 1 ".\\a" 1
+int i;
+# 2 ".\\a.cpp" 2
+
+template <typename T>
+void f(T i);
+
+template void f<int>(int i);
+
+int main(void)
+{
+    i = 1;
+    f(i);
+    double j = 2.2;
+    f(j);
+    return 0;
+}
+
+template <typename T>
+void f(T i)
+{
+    i = 2;
+}
