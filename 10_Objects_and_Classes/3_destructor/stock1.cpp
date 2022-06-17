@@ -1,9 +1,19 @@
 #include <iostream>
-#include "stock00.h"
+#include "stock1.h"
 using namespace std;
 
-void Stock::acquire(const string &co, long n, double pr)
+Stock::Stock()
 {
+    cout << "Default constructor called.\n";
+    company = "no name";
+    shares = 0;
+    share_val = 0.0;
+    total_val = 0.0;
+}
+
+Stock::Stock(const string &co, long n, double pr)
+{
+    cout << "Constructor using" << co << " called\n";
     company = co;
     if (n < 0)
     {
@@ -16,6 +26,12 @@ void Stock::acquire(const string &co, long n, double pr)
     share_val = pr;
     set_tot();
 }
+
+Stock::~Stock()
+{
+    cout << "Bye, " << company << "!\n";
+}
+
 
 void Stock::buy(long num, double price)
 {
@@ -58,10 +74,10 @@ void Stock::update(double price)
     set_tot();
 }
 
-void Stock::show(void)
+void Stock::show() const
 {
-    cout << "Company: " << company
-         << " Shares: " << shares << endl
-         << " Share Price: $" << share_val
-         << " Total Worth: $" << total_val << endl;
+    cout << "Company: " << company << endl
+         << "Shares: " << shares << endl
+         << "Share Price: $" << share_val << endl
+         << "Total Worth: $" << total_val << endl;
 }
