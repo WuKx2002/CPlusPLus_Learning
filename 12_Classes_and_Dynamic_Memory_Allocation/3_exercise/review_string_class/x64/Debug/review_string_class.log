@@ -1,0 +1,7 @@
+﻿  String.cpp
+C:\Users\Wu Kaixiang\Desktop\review_string_class\String.cpp(17,17): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Wu Kaixiang\Desktop\review_string_class\String.cpp(41,17): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  sayings2.cpp
+C:\Users\Wu Kaixiang\Desktop\review_string_class\sayings2.cpp(54,19): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  正在生成代码...
+  review_string_class.vcxproj -> C:\Users\Wu Kaixiang\Desktop\review_string_class\x64\Debug\review_string_class.exe
